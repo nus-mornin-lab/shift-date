@@ -117,6 +117,14 @@ server <- function(input, output, session) {
                   rename(!! identifier := (!! as.name("identifier"))),
                 by = identifier) %>%
       mutate_if(is.instant, funs(. + weeks(shift))) %>%
+      mutate_if(
+        is.instant,
+        funs(
+          sprintf("%s-%s-%s %s:%s:%s",
+                  year(.), month(.), day(.),
+                  hour(.), minute(.), second(.))
+        )
+      ) %>%
       select(-shift) %>%
       as.data.frame
   })
