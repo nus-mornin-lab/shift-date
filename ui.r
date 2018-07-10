@@ -14,7 +14,8 @@ ui <- tagList(
               "application/vnd.ms-excel",
               "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
               "text/csv",
-              "text/plain"
+              "text/plain",
+              ".csv", ".tsv", ".txt"
             )
           )
         ),
@@ -69,7 +70,8 @@ ui <- tagList(
               "application/vnd.ms-excel",
               "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
               "text/csv",
-              "text/plain"
+              "text/plain",
+              ".csv", ".tsv", ".txt"
             )
           )
         )
