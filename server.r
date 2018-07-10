@@ -1,3 +1,5 @@
+options(shiny.maxRequestSize=30*1024^3)
+
 server <- function(input, output, session) {
   original_data <- reactive({
     in_file <- input$`original-file`
