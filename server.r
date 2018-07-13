@@ -38,6 +38,7 @@ server <- function(input, output, session) {
     data %>%
       select(!! as.name(identifier)) %>%
       setNames("identifier") %>%
+      distinct(identifier) %>%
       mutate(shift = base::sample(from_week:to_week, n(), replace = TRUE))
   })
   
