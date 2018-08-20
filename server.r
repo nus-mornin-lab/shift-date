@@ -64,7 +64,7 @@ server <- function(input, output, session) {
     if (is.null(in_file)) return(NULL)
     
     tryCatch(
-      read_excel(in_file$datapath),
+      read_sheet(in_file$datapath),
       error = function(e) {
         print(e)
         NULL
